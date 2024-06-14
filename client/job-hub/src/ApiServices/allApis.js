@@ -9,3 +9,16 @@ export const getCompanies=async(header)=>{
 export const getSpecificCompany=(id,header)=>{
     return commonApi(header,"",`${base_url}/company/${id}/`,"GET")
 }
+
+
+export const getEmployees=async(header)=>{
+    return await commonApi(header,"",`${base_url}/employee/`,"GET")
+}
+
+export const addEmployee=async(header,data)=>{
+    return await commonApi(header,data,`${base_url}/employee/`,"POST")
+}
+
+export const addCompany=async(header,data)=>{
+    return await commonApi(header,data,`${base_url}/company/`,"POST")
+}

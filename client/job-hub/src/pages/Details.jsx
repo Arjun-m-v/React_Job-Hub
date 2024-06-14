@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import { Col,Row } from 'react-bootstrap'
 import { useParams } from 'react-router-dom';
 import { getSpecificCompany } from '../ApiServices/allApis';
+import AddEmployee from '../components/AddEmployee';
+
 
 function Details() {
   const [company,setCompany]=useState({})
@@ -42,6 +44,7 @@ function Details() {
                     <Card.Text><b>Salary : </b>{company.salary}</Card.Text>
                     <Card.Text><b>Contact : </b>{company.contact_number}</Card.Text> 
                     <Card.Text><b>Note : </b>{company.notes}</Card.Text> 
+                    <AddEmployee/>
                 </Card.Body>
               </Card>
 
