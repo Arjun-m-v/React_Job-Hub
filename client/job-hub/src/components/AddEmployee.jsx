@@ -33,7 +33,8 @@ function AddEmployee() {
             formData.append("resume",employeeData.resume)
 
             const header={
-                "Content-Type":"multipart/form-data"
+                "Content-Type":"multipart/form-data",
+                "Authorization":`Token ${sessionStorage.getItem('token')}`
             }
 
             const result=await addEmployee(header,formData)

@@ -22,3 +22,11 @@ export const addEmployee=async(header,data)=>{
 export const addCompany=async(header,data)=>{
     return await commonApi(header,data,`${base_url}/company/`,"POST")
 }
+
+export const UserRegister=async(data)=>{
+    return await commonApi("",data,`${base_url}/user/`,"POST")
+}
+
+export const getToken=async(data)=>{
+    return await commonApi("",data,`${base_url}/token`,"POST")
+}

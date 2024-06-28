@@ -1,10 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { Row, Col, Container } from 'react-bootstrap';
 
 function Home() {
+
+  const nav=useNavigate()
+
+  const Logout=()=>{
+    nav('/')
+    sessionStorage.removeItem('token')
+  }
+
   return (
     <div className="landing-page">
+      <Container className="d-flex justify-content-end">
+      <button className='btn btn-danger m-3' onClick={Logout}>LogOut</button>
+    </Container>
       <Container className="heading-container text-center">
         <h1 className="heading"><b>Job-Hub</b></h1>
         <p className="quote" style={{ fontFamily: 'cursive' }}>Find the perfect match for your career</p>

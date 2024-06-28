@@ -21,4 +21,4 @@ class CompanyModel(models.Model):
     contact_number=models.IntegerField()
     notes=models.CharField(max_length=500)
     image=models.ImageField(upload_to="company_images")
-    # image=models.ImageField(upload_to='company_images', default='https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg')
+

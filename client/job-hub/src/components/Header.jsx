@@ -10,13 +10,14 @@ function Header() {
       <Navbar  style={{ backgroundColor: '#98afd7' }} expand="md">  
     <Container> 
       <div style={{padding:"15px"}}>
-        <i style={{padding:"5px", fontSize:"30px",color: "#065ff9"}}  className="fa-solid fa-j fa-beat-fade"/> 
-        <i style={{padding:"5px", fontSize:"30px",color: "#065ff9"}}  className="fa-solid fa-h fa-beat-fade"/> 
+        <img src="https://cdn.pixabay.com/photo/2024/02/10/11/17/sun-8564595_640.png" width={'50px'} height={'50px'}alt="" />
+        {/* <i style={{padding:"5px", fontSize:"30px",color: "#065ff9"}}  className="fa-solid fa-j fa-beat-fade"/> 
+        <i style={{padding:"5px", fontSize:"30px",color: "#065ff9"}}  className="fa-solid fa-h fa-beat-fade"/>  */}
       </div>
       <Navbar.Brand href="#home"style={{fontFamily:"cursive",fontSize:"25px"}}>Job - Hub</Navbar.Brand>  
       <Navbar.Toggle aria-controls="basic-navbar-nav" />  
       <Navbar.Collapse id="basic-navbar-nav">  
-        <Nav className="me-auto">  
+        {/* <Nav className="me-auto">  
           <Nav.Link href="#home">Home</Nav.Link>  
           <Nav.Link href="#link">Link</Nav.Link>  
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">  
@@ -26,7 +27,7 @@ function Header() {
             <NavDropdown.Divider />  
             <NavDropdown.Item href="#action/3.4">Another Item</NavDropdown.Item>  
           </NavDropdown>  
-        </Nav>  
+        </Nav>   */}
       </Navbar.Collapse>  
     </Container>  
   </Navbar> 

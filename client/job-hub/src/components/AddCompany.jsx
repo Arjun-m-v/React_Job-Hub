@@ -33,7 +33,8 @@ function AddCompany() {
             formData.append("image",companyData.image)
 
             const header={
-                "Content-Type":"multipart/form-data"
+                "Content-Type":"multipart/form-data",
+                "Authorization":`Token ${sessionStorage.getItem('token')}`
             }
 
             const result=await addCompany(header,formData)

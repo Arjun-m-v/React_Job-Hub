@@ -16,17 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import EmployeeModelViewSet,CompanyModelViewSet
+from api.views import EmployeeModelViewSet,CompanyModelViewSet,UserViewSet
 from django.conf import settings
 from django.conf.urls.static import static
-
+from rest_framework.authtoken import views
 from rest_framework.routers import DefaultRouter
 
 router=DefaultRouter()
 
 router.register('employee',EmployeeModelViewSet,basename='employee')
 router.register('company',CompanyModelViewSet,basename='company')
+router.register('user',UserViewSet,basename='user')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('token', views.obtain_auth_token)
 ]+router.urls + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

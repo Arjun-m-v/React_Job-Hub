@@ -13,7 +13,13 @@ function Company() {
   },[])
 
   const getData=async()=>{
-    const result=await getEmployees()
+
+    const header={
+        "Content-Type":"multipart/form-data",
+        "Authorization":`Token ${sessionStorage.getItem('token')}`
+    }
+
+    const result=await getEmployees(header)
     setEmployees(result.data)
     console.log(employees);
   }
